@@ -11,9 +11,9 @@
 
 <html class="{{ html_class | downcase }}" lang="{{ site.language }}">
 <head>
-  {% include partials/head.html %}
+  <!-- {% include partials/head.html %}
   <title>{{ title }}</title>
-  {% include third-party/analytics/index.html %}
+  {% include third-party/analytics/index.html %} -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang | default: page.language | default: site.language }}">
@@ -31,7 +31,7 @@
     </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
+      <!-- <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
             {{ content }}
@@ -42,15 +42,15 @@
         {% if site.sidebar.display != 'remove' %}
           {{ sidebar }}
         {% endif %}
-      </div>
+      </div> -->
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
+      <!-- <div class="footer-inner">
         {% include partials/footer.html %}
         {% include third-party/analytics/busuanzi-counter.html %}
         {{ footer }}
-      </div>
+      </div> -->
     </footer>
 
     {% unless site.sidebar.b2t %}
@@ -64,7 +64,7 @@
 
   </div>
 
-  {% include scripts/vendors.html %}
+  <!-- {% include scripts/vendors.html %}
   {% include scripts/commons.html %}
 
   {% assign scheme_script = 'scripts/schemes/' | append: site.scheme | downcase | append: '.html' %}
@@ -72,7 +72,7 @@
 
   {{ script_extra }}
 
-  {% include scripts/boostrap.html %}
+  {% include scripts/boostrap.html %} -->
 
   <!-- {% include third-party/comments/index.html %}
   {% include third-party/search/index.html %}
