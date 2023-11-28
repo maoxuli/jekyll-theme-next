@@ -1,8 +1,8 @@
 <!doctype html>
-{% include _blocks/title.html %}
-{% include _blocks/page_class.html %}
-{% include _blocks/sidebar.html %}
-{% include _blocks/script_extra.html %}
+{% include blocks/title.html %}
+{% include blocks/page_class.html %}
+{% include blocks/sidebar.html %}
+{% include blocks/script_extra.html %}
 
 {% assign html_class = 'theme-next ' | append: site.scheme %}
 {% if site.use_motion %}
@@ -74,13 +74,13 @@
 
   {% include _scripts/boostrap.html %}
 
-  {% include _third-party/comments/index.html %}
-  {% include _third-party/search/index.html %}
-  {% include _third-party/analytics/lean-analytics.html %}
-  {% include _third-party/seo/baidu-push.html %}
-  {% include _third-party/rating.html %}
-  {% include _third-party/mathjax.html %}
-  {% include _third-party/scroll-cookie.html %}
-  {% include _third-party/exturl.html %}
+  {% include third-party/comments/index.html %}
+  {% include third-party/search/index.html %}
+  {% include third-party/analytics/lean-analytics.html %}
+  {% include third-party/seo/baidu-push.html %}
+  {% include third-party/rating.html %}
+  {% include third-party/mathjax.html %}
+  {% include third-party/scroll-cookie.html %}
+  {% include third-party/exturl.html %}
 </body>
 </html>
