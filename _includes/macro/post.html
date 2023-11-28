@@ -219,7 +219,7 @@
 
           {% if site.post_wordcount.wordcount or site.post_wordcount.min2read %}
             {% assign source = post.content %}
-            {% include _helper/wordcount.html %}
+            {% include helper/wordcount.html %}
             <div class="post-wordcount">
               {% if site.post_wordcount.wordcount %}
                 {% unless site.post_wordcount.separated_meta %}
@@ -300,7 +300,7 @@
           </div>
           <!--/noindex-->
         {% elsif post.excerpt  %}
-          {% include _macro/post-excerpt.html %}
+          {% include macro/post-excerpt.html %}
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="{{ post.url | relative_url }}{% if site.scroll_to_more %}#{{ __.post.more }}{% endif %}" rel="contents">
@@ -323,29 +323,29 @@
           {% if post.type == 'picture' %}
             <a href="{{ post.url | relative_url }}">{{ post.content }}</a>
           {% else %}
-            {% include _macro/post-content.html %}
+            {% include macro/post-content.html %}
           {% endif %}
         {% endif %}
       {% else %}
-        {% include _macro/post-content.html %}
+        {% include macro/post-content.html %}
       {% endif  %}
     </div>
 
     <div>
       {% unless is_index %}
-        {% include _macro/wechat-subscriber.html %}
+        {% include macro/wechat-subscriber.html %}
       {% endunless %}
     </div>
 
     <div>
       {% unless is_index %}
-        {% include _macro/reward.html %}
+        {% include macro/reward.html %}
       {% endunless %}
     </div>
 
     <div>
       {% unless is_index %}
-        {% include _macro/post-copyright.html %}
+        {% include macro/post-copyright.html %}
       {% endunless %}
     </div>
 

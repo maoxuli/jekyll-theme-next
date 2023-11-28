@@ -8,7 +8,7 @@
       {% assign keys = keys | push: site_key %}
       {% assign key = site_key %}
       {% assign value = site[site_key] %}
-      {% include _helper/_config_map.html key=key value=value deep=1 key_prefix='' %}
+      {% include helper/a_config_map.html key=key value=value deep=1 key_prefix='' %}
       {{ _config_map }}
     {% endunless %}
   {% endfor %}

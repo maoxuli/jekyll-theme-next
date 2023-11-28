@@ -11,7 +11,7 @@
 
 <html class="{{ html_class | downcase }}" lang="{{ site.language }}">
 <head>
-  {% include _partials/head.html %}
+  {% include partials/head.html %}
   <title>{{ title }}</title>
   {% include third-party/analytics/index.html %}
 </head>
@@ -27,7 +27,7 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> {% include _partials/header.html %} </div>
+      <div class="header-inner"> {% include partials/header.html %} </div>
     </header>
 
     <main id="main" class="main">
@@ -37,7 +37,7 @@
             {{ content }}
           </div>
           {% include third-party/duoshuo-hot-articles.html %}
-          {% include _partials/comments.html %}
+          {% include partials/comments.html %}
         </div>
         {% if site.sidebar.display != 'remove' %}
           {{ sidebar }}
@@ -47,7 +47,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        {% include _partials/footer.html %}
+        {% include partials/footer.html %}
         {% include third-party/analytics/busuanzi-counter.html %}
         {{ footer }}
       </div>
@@ -64,15 +64,15 @@
 
   </div>
 
-  {% include _scripts/vendors.html %}
-  {% include _scripts/commons.html %}
+  {% include scripts/vendors.html %}
+  {% include scripts/commons.html %}
 
-  {% assign scheme_script = '_scripts/schemes/' | append: site.scheme | downcase | append: '.html' %}
+  {% assign scheme_script = 'scripts/schemes/' | append: site.scheme | downcase | append: '.html' %}
   {% include {{ scheme_script }} %}
 
   {{ script_extra }}
 
-  {% include _scripts/boostrap.html %}
+  {% include scripts/boostrap.html %}
 
   {% include third-party/comments/index.html %}
   {% include third-party/search/index.html %}

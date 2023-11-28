@@ -9,7 +9,7 @@ $variables : base $scheme custom;
 $mixins    : base $scheme custom;
 
 
-{% include _helper/config_map.html %}
+{% include helper/config_map.html %}
 $jekyll-config-map : {{ config_map }};
 
 @function jekyll-config($key) {
@@ -51,4 +51,4 @@ $jekyll-config-map : {{ config_map }};
 
 // Custom Layer
 // --------------------------------------------------
-@import "_custom/custom";
+@import "custom/custom";

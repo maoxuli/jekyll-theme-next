@@ -6,7 +6,7 @@
 
     {% if blocks.size == 0 %}
       {% assign level = include.level | plus: 1 %}
-      {% include _helper/_toc.html source=include.source level=level number_prefix=include.number_prefix %}
+      {% include helper/a_toc.html source=include.source level=level number_prefix=include.number_prefix %}
       {{ _toc }}
     {% else %}
       {% for block in blocks %}
@@ -30,7 +30,7 @@
 
           {% capture number_prefix %}{{ include.number_prefix }}{{ forloop.index }}.{% endcapture %}
           {% assign level = include.level | plus: 1 %}
-          {% include _helper/_toc.html source=source level=level number_prefix=number_prefix %}
+          {% include helper/a_toc.html source=source level=level number_prefix=number_prefix %}
           {% if _toc.size != 0 %}
             <ol class="{{ class }}-child">
               {{ _toc }}

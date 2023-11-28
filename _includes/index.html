@@ -4,8 +4,8 @@
 <section id="posts" class="posts-expand">
   {% for post in posts %}
     {% assign is_index = true %}
-    {% include _macro/post.html %}
+    {% include macro/post.html %}
   {% endfor %}
 </section>
 
-{% include _partials/pagination.html %}
+{% include partials/pagination.html %}

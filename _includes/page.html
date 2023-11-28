@@ -1,5 +1,5 @@
 <div id="posts" class="posts-expand">
-{% include _partials/page-header.html %}
+{% include partials/page-header.html %}
   {% comment %} tagcloud page support {% endcomment %}
   {% if page.type == "tags" %}
     <div class="tag-cloud">
@@ -19,7 +19,7 @@
         {% assign color = true %}
         {% assign start_color = '204,204,204' %}
         {% assign end_color = '17,17,17' %}
-        {% include _helper/tagcloud.html %}
+        {% include helper/tagcloud.html %}
         {{ tagcloud }}
       </div>
     </div>
@@ -35,7 +35,7 @@
           {% endif %}
       </div>
       <div class="category-all">
-        {% include _helper/list_categories.html %}
+        {% include helper/list_categories.html %}
         {{ list_categories }}
       </div>
     </div>

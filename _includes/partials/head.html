@@ -59,7 +59,7 @@
   <link href="{{ fancybox_css_uri }}" rel="stylesheet" type="text/css" />
 {% endif %}
 
-{% include _partials/head/external-fonts.html %}
+{% include partials/head/external-fonts.html %}
 
 {% assign font_awesome_uri = site.vendors._internal | append: '/font-awesome/css/font-awesome.min.css?v=4.6.2' | relative_url %}
 {% if site.vendors.fontawesome %}
@@ -101,7 +101,7 @@
 {% assign google_plus = site.google_plus %}
 {% assign fb_admins = site.fb_admins %}
 {% assign fb_app_id = site.fb_app_id %}
-{% include _helper/open_graph.html %}
+{% include helper/open_graph.html %}
 {{ open_graph }}
 
 {% comment %} Export some HEXO Configurations to Front-End {% endcomment %}
@@ -132,4 +132,4 @@
   <link rel="canonical" href="{{ page.canonical_path | replace: 'index.html', '' | absolute_url }}"/>
 {% endif %}
 
-{% include _partials/head/custom-head.html %}
+{% include partials/head/custom-head.html %}

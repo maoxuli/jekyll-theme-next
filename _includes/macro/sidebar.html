@@ -14,7 +14,7 @@
       {% if is_post and site.toc.enable %}
         {% assign display_toc = true %}
         {% assign source = page.content %}
-        {% include _helper/toc.html %}
+        {% include helper/toc.html %}
       {% endif %}
 
       {% if display_toc and toc.size > 1 %}
@@ -137,7 +137,7 @@
           </div>
         {% endif %}
 
-        {% include _custom/sidebar.html %}
+        {% include custom/sidebar.html %}
 
       </section>
 
@@ -153,7 +153,7 @@
             {% endif %}
             {% assign class = 'nav' %}
             {% assign source = page.content %}
-            {% include _helper/toc.html %}
+            {% include helper/toc.html %}
 
             {% if toc.size <= 1 %}
               <p class="post-toc-empty">{{ __.post.toc_empty }}</p>
